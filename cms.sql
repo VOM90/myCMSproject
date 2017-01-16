@@ -50,7 +50,6 @@ INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comm
 (2, 19, 'Ivan', 'ivan23@gmail.com', 'JS is great!!!', 'approved', '2017-01-11'),
 (3, 20, 'Igor', 'Igor26@mail.ru', 'HTML5 is awesome!', 'approved', '2017-01-11'),
 (4, 19, 'Jerry', 'Jerry@yahoo.com', 'Yes it is!', 'unapproved', '2017-01-11'),
-(5, 23, 'Anton', 'vvv333@mail.ru', 'Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.', 'approved', '2017-01-12'),
 (6, 23, 'Oleksandr', 'pipipipi@gmail.com', 'Bootstrap ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.', 'approved', '2017-01-12'),
 (7, 21, 'Max', 'maximus@mail.ru', 'Sass has two syntaxes. The most commonly used syntax is known as â€œSCSSâ€ (for â€œSassy CSSâ€), and is a superset of CSS3â€™s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.', 'approved', '2017-01-12');
 
@@ -126,11 +125,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`) VALUES
-(30, 'Admin', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', 'Oleksandr', 'Vernyhora', 'ukralex1@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
+(30, 'Admin', '$2y$12$.lFm7KGZcnF6J56Farm3xOeZQRK9iutYdqH1iE35AVc7bqXOv4uAa', 'Oleksandr', 'Vernyhora', 'ukralex1@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
 (31, 'Dmytro', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', 'Dmytro', 'Tokar', 'dimas@ukr.net', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (32, 'Ivan', '$2y$10$iusesomecrazystrings2uvgnjnDOGIE6JPA9zzq36EdPnYMUav/S', '', '', 'ivanovich@example.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (33, 'Andriy', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', 'Andriy', 'Shevchenko', 'andrew@ukr.net', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
-(34, 'Giovanni', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', '', '', 'sirGio@example.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22');
+(34, 'Giovanni', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', '', '', 'sirGio@example.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
+(36, 'Elena', '$2y$12$O0LPrxLjy2w26mfg82SHf.Ejt1e.jnPV0IbtSnQWQGehTu52x24o6', '', '', 'elena1@ukr.net', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
+(37, 'Oleg', '$2y$12$EnLgeijkKHk78jpO5p8HcuPcV.urFR18Z56BOl7kOSp9UaSE3T486', '', '', 'olezhka@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
+(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22');
 
 --
 -- Indexes for dumped tables
@@ -183,7 +185,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
