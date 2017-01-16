@@ -79,7 +79,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(18, 26, 'PHP', 'Admin', '2017-01-11', 'php_pic.png', '<h5 style="text-align: justify;">PHP is&nbsp;a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</h5>', 'PHP, MySQL', 1, 'published', 0),
+(18, 26, 'PHP', 'Admin', '2017-01-11', 'php_pic.png', '<h5 style="text-align: justify;">PHP is&nbsp;a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</h5>', 'PHP, MySQL', 1, 'published', 1),
 (19, 26, 'JavaScript', 'Eddie', '2017-01-11', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 2, 'published', 0),
 (20, 26, 'HTML', 'Viktor', '2017-01-11', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 1, 'published', 0),
 (21, 31, 'SASS', 'Evgeniy', '2017-01-12', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 1, 'published', 0),
@@ -95,7 +95,13 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 (31, 31, 'SASS', 'Evgeniy', '2017-01-16', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 0, 'published', 0),
 (32, 28, 'jQuery', 'Nazar', '2017-01-16', 'jquery_pic.png', '<p>The purpose of&nbsp;jQuery is&nbsp;to make it much easier to use JavaScript on your website.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'draft', 0),
 (33, 26, 'HTML', 'Viktor', '2017-01-16', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
-(34, 26, 'JavaScript', 'Eddie', '2017-01-16', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'published', 0);
+(36, 26, 'zs', 'Admin', '2017-01-16', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
+(37, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 1),
+(38, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 0),
+(39, 26, 'zs', 'Admin', '2017-01-16', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
+(40, 26, 'zs', 'Admin', '2017-01-16', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
+(41, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 0),
+(42, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 0);
 
 -- --------------------------------------------------------
 
@@ -172,7 +178,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `users`
 --
