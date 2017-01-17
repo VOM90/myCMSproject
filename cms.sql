@@ -49,8 +49,6 @@ INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comm
 (1, 18, 'Vasyl', 'vasya@gmail.com', 'PHP is awesome!', 'approved', '2017-01-11'),
 (2, 19, 'Ivan', 'ivan23@gmail.com', 'JS is great!!!', 'approved', '2017-01-11'),
 (3, 20, 'Igor', 'Igor26@mail.ru', 'HTML5 is awesome!', 'approved', '2017-01-11'),
-(4, 19, 'Jerry', 'Jerry@yahoo.com', 'Yes it is!', 'unapproved', '2017-01-11'),
-(6, 23, 'Oleksandr', 'pipipipi@gmail.com', 'Bootstrap ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.', 'approved', '2017-01-12'),
 (7, 21, 'Max', 'maximus@mail.ru', 'Sass has two syntaxes. The most commonly used syntax is known as â€œSCSSâ€ (for â€œSassy CSSâ€), and is a superset of CSS3â€™s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.', 'approved', '2017-01-12');
 
 -- --------------------------------------------------------
@@ -78,8 +76,8 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(18, 26, 'PHP', 'Admin', '2017-01-11', 'php_pic.png', '<h5 style="text-align: justify;">PHP is&nbsp;a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</h5>', 'PHP, MySQL', 1, 'published', 3),
-(19, 26, 'JavaScript', 'Eddie', '2017-01-11', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 2, 'published', 0),
+(18, 26, 'PHP', 'Admin', '2017-01-11', 'php_pic.png', '<h5 style="text-align: justify;">PHP is&nbsp;a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</h5>', 'PHP, MySQL', 1, 'published', 8),
+(19, 26, 'JavaScript', 'Eddie', '2017-01-11', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 2, 'published', 11),
 (20, 26, 'HTML', 'Viktor', '2017-01-11', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 1, 'published', 0),
 (21, 31, 'SASS', 'Evgeniy', '2017-01-12', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 1, 'published', 0),
 (22, 28, 'jQuery', 'Nazar', '2017-01-11', 'jquery_pic.png', '<p>The purpose of&nbsp;jQuery is&nbsp;to make it much easier to use JavaScript on your website.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'draft', 0),
@@ -94,13 +92,8 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 (31, 31, 'SASS', 'Evgeniy', '2017-01-16', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 0, 'published', 0),
 (32, 28, 'jQuery', 'Nazar', '2017-01-16', 'jquery_pic.png', '<p>The purpose of&nbsp;jQuery is&nbsp;to make it much easier to use JavaScript on your website.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'draft', 0),
 (33, 26, 'HTML', 'Viktor', '2017-01-16', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
-(36, 26, 'zs', 'Admin', '2017-01-16', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
-(37, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 1),
-(38, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 0),
-(39, 26, 'zs', 'Admin', '2017-01-16', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
-(40, 26, 'zs', 'Admin', '2017-01-16', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
-(41, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 0),
-(42, 30, 'Bootstrap', 'Vladlen', '2017-01-16', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 0, 'published', 0);
+(43, 26, 'HTML', 'Viktor', '2017-01-17', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
+(44, 26, 'JavaScript', 'Eddie', '2017-01-17', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'published', 2);
 
 -- --------------------------------------------------------
 
@@ -175,12 +168,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `users`
 --

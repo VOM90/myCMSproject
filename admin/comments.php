@@ -51,8 +51,9 @@ switch($source) {
 
 ?>    
                                    
+                    </div>
+
                 </div>
-            </div>
                 <!-- /.row -->
 
             </div>

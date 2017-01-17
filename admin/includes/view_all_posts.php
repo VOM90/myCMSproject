@@ -125,16 +125,16 @@ if(isset($_POST['checkBoxArray'])) {
     $select_posts = mysqli_query($connection, $query);                                   
 
     while($row = mysqli_fetch_assoc($select_posts)) {
-    $post_id = $row['post_id'];
-    $post_author = $row['post_author'];
-    $post_title = $row['post_title'];    
-    $post_category_id = $row['post_category_id'];
-    $post_status = $row['post_status'];    
-    $post_image = $row['post_image'];
-    $post_tags = $row['post_tags'];
-    $post_comment_count = $row['post_comment_count'];
-    $post_date = $row['post_date'];
-    $post_views_count = $row['post_views_count'];
+        $post_id = $row['post_id'];
+        $post_author = $row['post_author'];
+        $post_title = $row['post_title'];    
+        $post_category_id = $row['post_category_id'];
+        $post_status = $row['post_status'];    
+        $post_image = $row['post_image'];
+        $post_tags = $row['post_tags'];
+        $post_comment_count = $row['post_comment_count'];
+        $post_date = $row['post_date'];
+        $post_views_count = $row['post_views_count'];
     
     echo"<tr>";
    
@@ -160,7 +160,18 @@ if(isset($_POST['checkBoxArray'])) {
         echo"<td>{$post_status}</td>";
         echo"<td><img width='100' src='../images/{$post_image}' alt='image'></td>";
         echo"<td>{$post_tags}</td>";
-        echo"<td>{$post_comment_count}</td>";
+        
+        $query = "SELECT * FROM comments WHERE comment_post_id = $post_id";
+        $send_comment_query = mysqli_query($connection, $query);
+        
+        $row = mysqli_fetch_array($send_comment_query);
+        $comment_id = $row['comment_id'];
+        $count_comments = mysqli_num_rows($send_comment_query);
+        
+            
+        echo"<td><a href='post_comments.php?id=$post_id'>$count_comments</a></td>";
+        
+            
         echo"<td>{$post_date}</td>";
         echo"<td><a href='../post.php?p_id={$post_id}'>View Post</a></td>";
         echo"<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
