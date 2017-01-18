@@ -62,6 +62,7 @@ CREATE TABLE `posts` (
   `post_category_id` int(3) NOT NULL,
   `post_title` varchar(255) NOT NULL,
   `post_author` varchar(255) NOT NULL,
+  `post_user` varchar(255) NOT NULL,
   `post_date` date NOT NULL,
   `post_image` text NOT NULL,
   `post_content` text NOT NULL,
@@ -75,25 +76,15 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(18, 26, 'PHP', 'Admin', '2017-01-11', 'php_pic.png', '<h5 style="text-align: justify;">PHP is&nbsp;a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</h5>', 'PHP, MySQL', 1, 'published', 8),
-(19, 26, 'JavaScript', 'Eddie', '2017-01-11', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 2, 'published', 11),
-(20, 26, 'HTML', 'Viktor', '2017-01-11', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 1, 'published', 0),
-(21, 31, 'SASS', 'Evgeniy', '2017-01-12', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 1, 'published', 0),
-(22, 28, 'jQuery', 'Nazar', '2017-01-11', 'jquery_pic.png', '<p>The purpose of&nbsp;jQuery is&nbsp;to make it much easier to use JavaScript on your website.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'draft', 0),
-(23, 30, 'Bootstrap', 'Vladlen', '2017-01-12', 'bootstrap_pic.png', '<p>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</p>', 'bootstrap, layout, css', 2, 'published', 0),
-(24, 26, 'zs', 'Admin', '2017-01-15', 'bootstrap_pic.png', '<p>jhjkhjk</p>', '4564564', 0, 'published', 0),
-(25, 26, 'PHP', 'Admin', '2017-01-16', 'php_pic.png', '<h5 style="text-align: justify;">PHP is&nbsp;a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</h5>', 'PHP, MySQL', 0, 'published', 0),
-(26, 26, 'JavaScript', 'Eddie', '2017-01-16', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'published', 0),
-(27, 26, 'HTML', 'Viktor', '2017-01-16', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
-(28, 31, 'SASS', 'Evgeniy', '2017-01-16', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 0, 'published', 0),
-(29, 28, 'jQuery', 'Nazar', '2017-01-16', 'jquery_pic.png', '<p>The purpose of&nbsp;jQuery is&nbsp;to make it much easier to use JavaScript on your website.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'draft', 0),
-(30, 26, 'HTML', 'Viktor', '2017-01-16', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
-(31, 31, 'SASS', 'Evgeniy', '2017-01-16', 'sass-logo-new.jpg', '<p>An extension of CSS that adds power and elegance to the basic language.</p>', 'SASS, CSS', 0, 'published', 0),
-(32, 28, 'jQuery', 'Nazar', '2017-01-16', 'jquery_pic.png', '<p>The purpose of&nbsp;jQuery is&nbsp;to make it much easier to use JavaScript on your website.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'draft', 0),
-(33, 26, 'HTML', 'Viktor', '2017-01-16', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
-(43, 26, 'HTML', 'Viktor', '2017-01-17', 'html5.jpg', '<p style="text-align: justify;">HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>', 'HTML, Bootstrap, CSS', 0, 'published', 0),
-(44, 26, 'JavaScript', 'Eddie', '2017-01-17', 'js_pic.png', '<p style="text-align: justify;">JavaScript&nbsp;is a high-level, dynamic, untyped, and interpreted programming language.</p>', 'JS, jQuery, Bootstrap, HTML', 0, 'published', 2);
+INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
+(48, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 0),
+(49, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 3),
+(55, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 0),
+(56, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 0),
+(57, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 0),
+(58, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 0),
+(59, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 0),
+(60, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 1);
 
 -- --------------------------------------------------------
 
@@ -168,12 +159,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `users`
 --
