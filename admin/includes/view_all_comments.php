@@ -78,7 +78,7 @@ confirmQuery($update_to_delete);
                     <tr>
                        <th><input id="selectAllBoxes" type="checkbox"></th>
                         <th>Id</th>
-                        <th>Author</th>
+                        <th>User</th>
                         <th>Comment</th>
                         <th>Email</th>
                         <th>Status</th>
@@ -101,7 +101,7 @@ confirmQuery($update_to_delete);
     while($row = mysqli_fetch_assoc($select_comments)) {
         $comment_id          = $row['comment_id'];
         $comment_post_id     = $row['comment_post_id'];
-        $comment_author      = $row['comment_author'];
+        $comment_author       = $row['comment_author'];
         $comment_content     = $row['comment_content'];
         $comment_email       = $row['comment_email'];
         $comment_status      = $row['comment_status'];
@@ -149,7 +149,7 @@ confirmQuery($update_to_delete);
 
 if(isset($_GET['unapprove'])) {
  
-    $the_comment_id = $_GET['unapprove'];
+    $the_comment_id = escape($_GET['unapprove']);
     
     $query = "UPDATE comments SET comment_status = 'unapproved' WHERE comment_id = $the_comment_id";
     $unapprove_comment_query = mysqli_query($connection, $query);
@@ -158,7 +158,7 @@ if(isset($_GET['unapprove'])) {
 
 if(isset($_GET['approve'])) {
  
-    $the_comment_id = $_GET['approve'];
+    $the_comment_id = escape($_GET['approve']);
     
     $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = $the_comment_id ";
     $approve_comment_query = mysqli_query($connection, $query);
@@ -168,7 +168,7 @@ if(isset($_GET['approve'])) {
 
 if(isset($_GET['delete'])) {
  
-    $the_comment_id = $_GET['delete'];
+    $the_comment_id = escape($_GET['delete']);
     
     $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id}";
     $delete_query = mysqli_query($connection, $query);
