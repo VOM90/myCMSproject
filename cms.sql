@@ -46,10 +46,9 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comment_email`, `comment_content`, `comment_status`, `comment_date`) VALUES
-(1, 18, 'Vasyl', 'vasya@gmail.com', 'PHP is awesome!', 'approved', '2017-01-11'),
-(2, 19, 'Ivan', 'ivan23@gmail.com', 'JS is great!!!', 'approved', '2017-01-11'),
-(3, 20, 'Igor', 'Igor26@mail.ru', 'HTML5 is awesome!', 'approved', '2017-01-11'),
-(7, 21, 'Max', 'maximus@mail.ru', 'Sass has two syntaxes. The most commonly used syntax is known as â€œSCSSâ€ (for â€œSassy CSSâ€), and is a superset of CSS3â€™s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.', 'approved', '2017-01-12');
+(8, 61, 'Jordi', 'jordi@gmail.com', 'yuuuppiiiiiiii', 'approved', '2017-01-18'),
+(9, 62, 'Jerry', 'jerry@mail.ru', 'yuhuuuuuuuu', 'approved', '2017-01-18'),
+(10, 48, 'Tammy', 'tammy@jotmail.com', 'hgjhgjhgjhg jhgjhgjhg jhgjhgjhgjh', 'unapproved', '2017-01-18');
 
 -- --------------------------------------------------------
 
@@ -77,14 +76,13 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(48, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 0),
-(49, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 3),
-(55, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 0),
-(56, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 0),
-(57, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 0),
-(58, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 0),
-(59, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 0),
-(60, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'published', 1);
+(48, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'draft', 5),
+(49, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'draft', 4),
+(61, 30, 'Bootstrap', '', 'Elena', '2017-01-18', 'bootstrap_pic.png', '<p>csssssssssssssssssssssss</p>', 'css', 0, 'draft', 3),
+(62, 29, 'HTML5', '', 'Andriy', '2017-01-18', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 3),
+(66, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 0),
+(68, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 0),
+(69, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 0);
 
 -- --------------------------------------------------------
 
@@ -116,7 +114,8 @@ INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `
 (34, 'Giovanni', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', '', '', 'sirGio@example.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (36, 'Elena', '$2y$12$O0LPrxLjy2w26mfg82SHf.Ejt1e.jnPV0IbtSnQWQGehTu52x24o6', '', '', 'elena1@ukr.net', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (37, 'Oleg', '$2y$12$EnLgeijkKHk78jpO5p8HcuPcV.urFR18Z56BOl7kOSp9UaSE3T486', '', '', 'olezhka@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
-(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22');
+(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
+(39, 'Toma', '$2y$10$LFUf9gKNLd2xfPCJspVVCua8OrAba9q8LCfRWdHuXqUbFZ95/TGsW', 'Tamara', 'Ivanova', 'tamara@yahoo.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22');
 
 --
 -- Indexes for dumped tables
@@ -159,17 +158,17 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

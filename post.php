@@ -24,10 +24,25 @@
                 if(!$send_query) {
 
                     die("query failed");
-                }    
+                }
+                    
+                if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin') {
+                    
+                    $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
+                    
+                } else {
+                    
+                    $query = "SELECT * FROM posts WHERE post_id = $the_post_id AND post_status = 'published' " ;
+                }  
     
-                $query = "SELECT * FROM posts WHERE post_id = $the_post_id";
+                
                 $select_all_posts_query = mysqli_query($connection, $query);
+                    
+                if(mysqli_num_rows($select_all_posts_query) < 1) {
+                    
+                    echo "<h1 class='text-center'>No posts available!</h2>";
+                    
+                } else {   
 
                 while($row = mysqli_fetch_assoc($select_all_posts_query)) {
                     $post_title = $row['post_title'];
@@ -37,8 +52,7 @@
                     $post_content = $row['post_content'];
                 ?>
                 <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
+                    Posts
                 </h1>
 
                 <!-- First Blog Post -->
@@ -58,11 +72,7 @@
                   
                 <?php }
                 
-                } else {
-                    
-                    header("Location: index.php");
-                }
-                
+                } 
                 
                 ?>  
                 
@@ -154,7 +164,11 @@
                 </div>
          
                
-                <?php } ?>               
+                <?php } }  else {
+                    
+                    header("Location: index.php");
+                }
+                ?>               
                 
                 </div>
 
