@@ -1,3 +1,21 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 09, 2017 at 08:42 PM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 7.0.13
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Database: `cms`
 --
@@ -76,11 +94,11 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(48, 26, 'Test user 3', '', 'Ivan', '2017-01-18', 'js_pic.png', '<p>kjgjhg dfgd fgvbn uyuiyuiyi</p>', 'js', 0, 'draft', 5),
-(49, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'draft', 4),
-(61, 30, 'Bootstrap', '', 'Elena', '2017-01-18', 'bootstrap_pic.png', '<p>csssssssssssssssssssssss</p>', 'css', 0, 'draft', 3),
-(62, 29, 'HTML5', '', 'Andriy', '2017-01-18', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 3),
-(66, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 0),
+(48, 26, 'Test user 3', '', 'Ivan', '2017-02-09', 'js_pic.png', '<p>Yoyoyoyoyoyoyo )))</p>', 'js', 0, 'published', 8),
+(49, 28, 'jQuery', '', 'Dmytro', '2017-01-18', 'jquery_pic.png', '<p>jjjj hhhh jjjj kkkk kkkk</p>', 'jQuery', 0, 'published', 6),
+(61, 30, 'Bootstrap', '', 'Elena', '2017-01-18', 'bootstrap_pic.png', '<p>csssssssssssssssssssssss</p>', 'css', 0, 'published', 3),
+(62, 29, 'HTML5', '', 'Andriy', '2017-01-18', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'published', 3),
+(66, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 1),
 (68, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 0),
 (69, 29, 'HTML5', '', 'Andriy', '2017-01-21', 'html5.jpg', '<p>yuyuyuyuyuy</p>', 'html5', 0, 'draft', 0);
 
@@ -114,8 +132,7 @@ INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `
 (34, 'Giovanni', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', '', '', 'sirGio@example.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (36, 'Elena', '$2y$12$O0LPrxLjy2w26mfg82SHf.Ejt1e.jnPV0IbtSnQWQGehTu52x24o6', '', '', 'elena1@ukr.net', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (37, 'Oleg', '$2y$12$EnLgeijkKHk78jpO5p8HcuPcV.urFR18Z56BOl7kOSp9UaSE3T486', '', '', 'olezhka@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
-(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
-(39, 'Toma', '$2y$10$LFUf9gKNLd2xfPCJspVVCua8OrAba9q8LCfRWdHuXqUbFZ95/TGsW', 'Tamara', 'Ivanova', 'tamara@yahoo.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22');
+(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22');
 
 --
 -- Indexes for dumped tables
@@ -168,7 +185,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
