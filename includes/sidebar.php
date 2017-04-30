@@ -60,6 +60,6 @@
                 </div>
         
 <!-- Side Widget Well -->
-<?php include "includes/widget.php"?>
+<?php include "includes/widget.php" ?>
                 
             </div>

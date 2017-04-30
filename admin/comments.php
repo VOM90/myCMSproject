@@ -1,4 +1,4 @@
-<?php include "includes/admin_header.php"?>
+<?php include "includes/admin_header.php" ?>
 
     <div id="wrapper">
 
@@ -62,4 +62,4 @@ switch($source) {
         </div>
         <!-- /#page-wrapper -->
 
-<?php include "includes/admin_footer.php"?>    
+<?php include "includes/admin_footer.php" ?>    

@@ -2,10 +2,10 @@
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 09, 2017 at 08:42 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- Хост: 127.0.0.1
+-- Час створення: Квт 30 2017 р., 11:51
+-- Версія сервера: 10.1.19-MariaDB
+-- Версія PHP: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cms`
+-- База даних: `cms`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Структура таблиці `categories`
 --
 
 CREATE TABLE `categories` (
@@ -32,7 +32,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `categories`
+-- Дамп даних таблиці `categories`
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Структура таблиці `comments`
 --
 
 CREATE TABLE `comments` (
@@ -60,7 +60,7 @@ CREATE TABLE `comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `comments`
+-- Дамп даних таблиці `comments`
 --
 
 INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comment_email`, `comment_content`, `comment_status`, `comment_date`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comm
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Структура таблиці `posts`
 --
 
 CREATE TABLE `posts` (
@@ -90,7 +90,7 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `posts`
+-- Дамп даних таблиці `posts`
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
@@ -105,7 +105,7 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Структура таблиці `users`
 --
 
 CREATE TABLE `users` (
@@ -121,7 +121,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Дамп даних таблиці `users`
 --
 
 INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`) VALUES
@@ -132,60 +132,61 @@ INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `
 (34, 'Giovanni', '$2y$10$iusesomecrazystrings2ui1qr860E30b0c9ijNqwCSwHnHdgz.1K', '', '', 'sirGio@example.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (36, 'Elena', '$2y$12$O0LPrxLjy2w26mfg82SHf.Ejt1e.jnPV0IbtSnQWQGehTu52x24o6', '', '', 'elena1@ukr.net', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
 (37, 'Oleg', '$2y$12$EnLgeijkKHk78jpO5p8HcuPcV.urFR18Z56BOl7kOSp9UaSE3T486', '', '', 'olezhka@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
-(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22');
+(38, 'Ramaha', '$2y$12$/ZNs2OlNsnBEagQNcm64TeOR7P5rZog2r7mdhTJgB/uxm41kmamSO', 'Roman', 'Little', 'ramasha@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22'),
+(39, 'Josh', '$2y$12$8TS5pjbKHU1psy72Vk.6POOWxZYIN4fzTvJoCL597jSOSfjeIFUs2', '', '', 'ukalex1@gmail.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22');
 
 --
--- Indexes for dumped tables
+-- Індекси збережених таблиць
 --
 
 --
--- Indexes for table `categories`
+-- Індекси таблиці `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
--- Indexes for table `comments`
+-- Індекси таблиці `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Indexes for table `posts`
+-- Індекси таблиці `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`post_id`);
 
 --
--- Indexes for table `users`
+-- Індекси таблиці `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для збережених таблиць
 --
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT для таблиці `categories`
 --
 ALTER TABLE `categories`
   MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
--- AUTO_INCREMENT for table `comments`
+-- AUTO_INCREMENT для таблиці `comments`
 --
 ALTER TABLE `comments`
   MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT for table `posts`
+-- AUTO_INCREMENT для таблиці `posts`
 --
 ALTER TABLE `posts`
   MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT для таблиці `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
